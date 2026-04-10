@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MinimalSole</title>
+    <link rel="stylesheet" href="../Css/styles.css">
+    <link rel="stylesheet" href="/Css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-home-link">
+                    <img src="/images/White And Grey Simple Illustration Shoes Store Logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-name">Minimal Sole</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html" class="active">Products</a>
+                <a href="about.html">About</a>
+                <a href="research.html">Research</a>
+                <a href="blog.html">Blog</a>
+                <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="nav-login-button">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="product-main">
+        <h1>Footwear Products</h1>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-img-placeholder">
+                    <img src="img/pngwing.com (1).png" alt="Classic Sneakers">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Sneakers NoWhere</div>
+                    <div class="product-price">Rs.5000.00</div>
+                    <div class="product-desc">Classic comfort and style for everyday wear.</div>
+                    <button class="add-cart-btn" onclick="addToCart({
+                        id: 'sneakers-nowhere',
+                        name: 'Sneakers NoWhere',
+                        price: 5000.00,
+                        image: 'img/pngwing.com (1).png'
+                    })">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-img-placeholder">
+                    <img src="img/pngwing.com (2).png" alt="Running Sneakers">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Sneakers Cloud</div>
+                    <div class="product-price">Rs.6500.00</div>
+                    <div class="product-desc">Lightweight running shoes for all terrains.</div>
+                    <button class="add-cart-btn" onclick="addToCart({
+                        id: 'sneakers-cloud',
+                        name: 'Sneakers Cloud',
+                        price: 6500.00,
+                        image: 'img/pngwing.com (2).png'
+                    })">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- Product Card 3 (Sale) -->
+            <div class="product-card sale">
+                <div class="product-img-placeholder">
+                    <img src="img/pngwing.com.png" alt="Trendy Sneakers">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Butterfly Sneakers<span class="sale-badge">Sale</span></div>
+                    <div class="product-price"><span class="old-price">Rs.7200.00</span>Rs.6900.00</div>
+                    <div class="product-desc">Trendy sneakers now at a discounted price!</div>
+                    <button class="add-cart-btn" onclick="addToCart({
+                        id: 'butterfly-sneakers',
+                        name: 'Butterfly Sneakers',
+                        price: 6900.00,
+                        image: 'img/pngwing.com.png'
+                    })">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-img-placeholder">
+                    <img src="img/pngwing.com (5).png" alt="Mesh Sneakers">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Nike Cloud</div>
+                    <div class="product-price">Rs.7899.99</div>
+                    <div class="product-desc">Breathable mesh for maximum comfort.</div>
+                    <button class="add-cart-btn" onclick="addToCart({
+                        id: 'nike-cloud',
+                        name: 'Nike Cloud',
+                        price: 7899.99,
+                        image: 'img/pngwing.com (5).png'
+                    })">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- Product Card 5 (Sale) -->
+            <div class="product-card sale">
+                <div class="product-img-placeholder">
+                    <img src="img/pngwing.com (4).png" alt="Limited Edition Sneakers">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Humble Sound <span class="sale-badge">Sale</span></div>
+                    <div class="product-price"><span class="old-price">Rs.8595.00</span> Rs.7980.00</div>
+                    <div class="product-desc">Limited edition, now at a special price.</div>
+                    <button class="add-cart-btn" onclick="addToCart({
+                        id: 'humble-sound',
+                        name: 'Humble Sound',
+                        price: 7980.00,
+                        image: 'img/pngwing.com (4).png'
+                    })">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <div class="product-img-placeholder">
+                    <img src="img/pngwing.com (3).png" alt="Durable Sneakers">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Humble shooter</div>
+                    <div class="product-price">Rs.8890.00</div>
+                    <div class="product-desc">Durable and stylish for all-day wear.</div>
+                    <button class="add-cart-btn" onclick="addToCart({
+                        id: 'humble-shooter',
+                        name: 'Humble shooter',
+                        price: 8890.00,
+                        image: 'img/pngwing.com (3).png'
+                    })">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <p>Itahari International College</p>
+                <p>Sundarharaicha- 4 , Morang</p>
+                <p>Phone: 9814941918</p>
+                <p>Nepal</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/purusottam.barakotii"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sandybrown___"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/9779814941918"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/purusottam-barakoti-a44633352/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Minimal Sole . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this before the closing body tag -->
+    <script src="../JavaScript/cart.js"></script>
+</body>
+</html>

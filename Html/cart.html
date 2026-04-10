@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - MinimalSole</title>
+    <link rel="stylesheet" href="../Css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cart-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .cart-header {
+            margin-bottom: 2rem;
+        }
+
+        .cart-items {
+            margin-bottom: 2rem;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 100px 2fr 1fr 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quantity-controls button {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .quantity-controls span {
+            min-width: 2rem;
+            text-align: center;
+        }
+
+        .remove-item {
+            color: #ff4444;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .cart-summary {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .cart-total {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-button {
+            width: 100%;
+            padding: 1rem;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .checkout-button:hover {
+            background: #0056b3;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        .empty-cart h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .empty-cart p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .empty-cart .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .empty-cart .cta-button:hover {
+            background: #0056b3;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-home-link">
+                    <img src="/images/White And Grey Simple Illustration Shoes Store Logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-name">Minimal Sole</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="research.html">Research</a>
+                <a href="blog.html">Blog</a>
+                <a href="cart.html" class="cart-link active"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="login.html" class="nav-login-button">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1>Shopping Cart</h1>
+        </div>
+
+        <div id="cart-content">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+
+        <div class="cart-summary">
+            <div class="cart-total">
+                Total: <span id="cart-total-amount">Rs.0</span>
+            </div>
+            <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <p>Itahari International College</p>
+                <p>Sundarharaicha- 4 , Morang</p>
+                <p>Phone: 9814941918</p>
+                <p>Nepal</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Minimal Sole. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/cart.js"></script>
+    <script>
+        // Function to render cart items
+        function renderCart() {
+            const cartContent = document.getElementById('cart-content');
+            const cartTotal = document.getElementById('cart-total-amount');
+            
+            if (cart.length === 0) {
+                cartContent.innerHTML = `
+                    <div class="empty-cart">
+                        <h2>Your cart is empty</h2>
+                        <p>Add some items to your cart to see them here.</p>
+                        <a href="product.html" class="cta-button">Continue Shopping</a>
+                    </div>
+                `;
+                cartTotal.textContent = 'Rs.0';
+                return;
+            }
+
+            let cartHTML = '<div class="cart-items">';
+            cart.forEach(item => {
+                cartHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="item-details">
+                            <h3>${item.name}</h3>
+                            <p>${formatPrice(item.price)}</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                        </div>
+                        <div class="item-total">
+                            ${formatPrice(item.price * item.quantity)}
+                        </div>
+                        <div class="remove-item" onclick="removeFromCart('${item.id}')">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                `;
+            });
+            cartHTML += '</div>';
+            
+            cartContent.innerHTML = cartHTML;
+            cartTotal.textContent = formatPrice(calculateTotal());
+        }
+
+        // Function to handle checkout
+        function checkout() {
+            if (cart.length === 0) {
+                showNotification('Your cart is empty!');
+                return;
+            }
+            // Here you would typically redirect to a checkout page
+            showNotification('Proceeding to checkout...');
+        }
+
+        // Initialize cart when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCart();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinimalSole - Elegant Footwear</title>
+    <link rel="stylesheet" href="../Css/styles.css"><!-- Link  css file for home page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!-- Linkinging js file here -->
+    <style>
+      /* Internal CSS: Only for this page */
+      .best-selling h2 {
+        color: #040508;
+        letter-spacing: 2px;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-home-link">
+                    <img src="/images/White And Grey Simple Illustration Shoes Store Logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-name">Minimal Sole</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="research.html">Research</a>
+                <a href="blog.html">Blog</a>
+                <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="nav-login-button">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Hero Section: Main banner area featuring premium and summer collections -->
+        <div class="hero-container">
+            <div class="hero-item premium-collection">
+                <div class="premium-image">
+                    <video autoplay muted loop playsinline>
+                        <source src="/Group 20 IS Coursework/Group 20 code/videos/4380323-hd_1080_1920_30fps (2).mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="premium-overlay">
+                    <h2>Premium Collection</h2>
+                    <p>Discover our exclusive range of premium footwear</p>
+                    <button class="cta-button">Shop Now</button>
+                </div>
+            </div>
+            
+            <div class="hero-item summer-collection">
+                <div class="summer-image">
+                    <video autoplay muted loop playsinline>
+                        <source src="/Group 20 IS Coursework/Group 20 code/videos/9640636-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="summer-overlay">
+                    <h2>Summer Collection</h2>
+                    <p>Light and comfortable shoes for the summer season</p>
+                    <button class="cta-button">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="products-vertical">
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Red Sneakers">
+                <div class="product-details">
+                    <h3>Red Sport Sneakers</h3>
+                    <p class="price">Rs.12,999</p>
+                    <p class="description">Premium quality sport sneakers with enhanced comfort</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        id: 'red-sneakers',
+                        name: 'Red Sport Sneakers',
+                        price: 12999,
+                        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="White Sneakers">
+                <div class="product-details">
+                    <h3>White Classic Sneakers</h3>
+                    <p class="price">Rs.9,999</p>
+                    <p class="description">Timeless white sneakers for everyday wear</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        id: 'white-sneakers',
+                        name: 'White Classic Sneakers',
+                        price: 9999,
+                        image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Black Boots">
+                <div class="product-details">
+                    <h3>Black Leather Boots</h3>
+                    <p class="price">Rs.14,999</p>
+                    <p class="description">Stylish leather boots for a premium look</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        id: 'black-boots',
+                        name: 'Black Leather Boots',
+                        price: 14999,
+                        image: 'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2hvZXN8ZW58MHx8MHx8fDA%3D'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Selling Products -->
+    <section class="best-selling">
+        <h2>Best Selling Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1726317219474-7f8a98b53743?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xhc3NpYyUyMHNuZWFrZXJzfGVufDB8fDB8fHww" alt="Classic Sneaker">
+                <h3>Classic Sneaker</h3>
+                <p>Timeless design meets modern comfort</p>
+            </div>
+            <div class="product-card">
+                <img src="https://plus.unsplash.com/premium_photo-1672046218036-c2dbd157bf3d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHVyYmFuJTIwcnVubmVyfGVufDB8fDB8fHww" alt="Urban Runner">
+                <h3>Urban Runner</h3>
+                <p>Perfect for city adventures</p>
+            </div>
+            <div class="product-card">
+                <img src="https://plus.unsplash.com/premium_photo-1705554330163-2e0ccc1808e2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bG9mZXJzJTIwc2hvZXN8ZW58MHx8MHx8fDA%3D" alt="Minimalist Loafers">
+                <h3>Minimalist Loafers</h3>
+                <p>Elegant simplicity redefined</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scroll Popup Box -->
+    <div class="scroll-popup" id="scrollPopup">
+        <div class="scroll-popup-content">
+            <span class="close-scroll-popup" id="closeScrollPopup">&times;</span>
+            <h2>Special Offer Just for You!</h2>
+            <p>Enjoy 15% off on our Summer Collection. Use code: <strong>SUMMER15</strong></p>
+            <button class="shop-now" onclick="window.location.href='#summer-collection'">Shop Now</button>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="https://plus.unsplash.com/premium_photo-1670983858433-8ef0f54f0c71?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1lbnMlMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D" alt="Men's Collection">
+                <h3>Men's</h3>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1670938258821-2956d4ce9c9b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d29tZW5zJTIwc2hvZXN8ZW58MHx8MHx8fDA%3Dtps:/" alt="Women's Collection">
+                <h3>Women's</h3>
+            </div>
+            <div class="category-card kids-card">
+                <img src="https://media.istockphoto.com/id/902867422/photo/i-have-to-get-ready-for-school.webp?a=1&b=1&s=612x612&w=0&k=20&c=85u2MRq_x-6tQy_MYRFtvhaLL2RAiS8h4WmnqAVLkbY=" alt="Kids Collection">
+                <h3>Kids</h3>
+            </div>
+            <div class="category-card trending-card">
+                <img src="https://images.unsplash.com/photo-1556812191-381c7e7d96d6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJlbmRpbmclMjBzaG9lcyU1Q3xlbnwwfHwwfHx8MA%3D%3D" alt="Trending">
+                <h3>Trending</h3>
+            </div>
+            <div class="category-card best-card">
+                <img src="https://images.unsplash.com/photo-1663856548834-3b5814f6dc11?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8am9yZGFuc3xlbnwwfHwwfHx8MA%3D%3D" alt="Best Sellers">
+                <h3>Best</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <p>Itahari International College</p>
+                <p>Sundarharaicha- 4 , Morang</p>
+                <p>Phone: 9814941918</p>
+                <p>Nepal</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/purusottam.barakotii"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sandybrown___"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/9779814941918"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/purusottam-barakoti-a44633352/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Minimal Sole . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this before the closing body tag -->
+    <script src="../JavaScript/cart.js"></script>
+</body>
+</html>
